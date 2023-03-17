@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #343a40;
+  line-height: 1;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 86px;
+  gap: 12px;
+}
+
+.arrow {
+  height: 48px;
+  width: 48px;
+  background: none;
+  border-radius: 50%;
+  border: 1px solid #087f5b;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow:hover {
+  background-color: #087f5b;
+}
+
+.arrow:hover .arrow-inner {
+  stroke: white;
+}
+
+.arrow-inner {
+  height: 24px;
+  width: 24px;
+  stroke: #087f5b;
+}
+
+.number:link,
+.number:visited {
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: #343a40;
+}
+
+.number:hover,
+.number:active,
+.number:nth-child(4):link,
+.number:nth-child(4):visited {
+  background-color: #087f5b;
+  border-radius: 50%;
+  height: 24px;
+  width: 24px;
+  color: white;
+}
+
+.dots {
+  color: #51555a;
+  font-size: 8px;
+}
