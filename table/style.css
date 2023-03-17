@@ -1,0 +1,35 @@
+ /* #087f5b; */
+ * {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #343a40;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  width: 800px;
+  margin-top: 100px;
+  border-collapse: collapse;
+  font-size: 18px;
+}
+
+thead th {
+  background-color: #087f5b;
+  color: white;
+  width: 25%;
+}
+
+th, td {
+  padding: 16px 24px;
+  text-align: left;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #d9d9d9;
+}
