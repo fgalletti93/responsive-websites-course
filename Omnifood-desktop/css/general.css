@@ -51,6 +51,18 @@ body {
 /* ********************** */
 /* REUSEABLE CLASSES */
 /* ********************* */
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important;
+}
+
+strong {
+  font-weight: 500;
+}
+
+.center-text {
+  text-align: center;
+}
+
 .grid {
   display: grid;
   row-gap: 9.6rem;
@@ -115,7 +127,20 @@ body {
 }
 
 
+.link:link, .link:visited {
+  display: inline-block;
+  color: #e67e22;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
 
+  transition: all 0.3s;
+}
+
+.link:active, .link:hover {
+  color: #cf711f;
+  border-bottom: 1px solid transparent;
+}
 
 
 
