@@ -1,9 +1,6 @@
-const year = document.querySelector('.year');
-const currentYear = new Date().getFullYear()
-year.textContent = currentYear
-
-
-
+const year = document.querySelector(".year");
+const currentYear = new Date().getFullYear();
+year.textContent = currentYear;
 
 // MOBILE NAVIGATION //
 const menuBtn = document.querySelector(".btn-mobile-nav");
@@ -14,6 +11,54 @@ menuBtn.addEventListener("click", function () {
   header.classList.toggle("nav-open");
 
 });
+
+
+
+// Smooth scrolling animation
+const allLinks = document.querySelectorAll("a:link");
+allLinks.forEach(function (link) {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+    const href = link.getAttribute("href");
+
+    // back to top
+    if (href === "#")
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+
+      // other links
+    if (href !== "#" && href.startsWith("#")) {
+      const sectionElement = document.querySelector(href);
+      sectionElement.scrollIntoView({ behavior: "smooth" })
+    }
+
+    // close mobile navigation
+    if(link.classList.contains('main-nav-link')) {
+      header.classList.toggle("nav-open");
+    }
+  });
+});
+
+
+// sticky nav
+const sectionHeroEl = document.querySelector('.section-hero')
+
+const observer = new IntersectionObserver(function(entries){
+  const ent = entries[0];
+
+  if(!ent.isIntersecting) {
+    document.body.classList.add('sticky-nav');
+  }
+  else document.body.classList.remove('sticky-nav');
+}, {
+  root: null,
+  threshold: 0,
+  rootMargin: '-80px'
+})
+observer.observe(sectionHeroEl)
+
 
 
 
